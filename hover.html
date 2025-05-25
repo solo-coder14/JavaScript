@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            transition: background-color 0.3s;
+        }
+
+        .hover-active {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="hover-box" class="hover-box" style="width: 200px; height: 100px; background-color: lightblue;">
+        Hover over me!
+    </div> -->
+    <div id="hover-box" class="hover-box">Hover over me!</div>
+    <!-- <script>
+        // Select the element
+        const hoverBox = document.getElementById('hover-box');
+
+        // Add a hover effect
+        hoverBox.addEventListener('mouseover', () => {
+            hoverBox.style.backgroundColor = 'lightgreen'; // Change color on hover
+        });
+
+        hoverBox.addEventListener('mouseout', () => {
+            hoverBox.style.backgroundColor = 'lightblue'; // Revert color on mouse out
+        });
+    </script> -->
+
+
+    <!-- <script>
+        const hoverBox = document.getElementById('hover-box');
+
+        hoverBox.addEventListener('mouseenter', () => {
+            hoverBox.style.backgroundColor = 'lightgreen'; // Change color
+        });
+
+        hoverBox.addEventListener('mouseleave', () => {
+            hoverBox.style.backgroundColor = 'lightblue'; // Revert color
+        });
+    </script> -->
+
+    <script>
+        const hoverBox = document.getElementById('hover-box');
+
+        hoverBox.addEventListener('mouseover', () => {
+            hoverBox.classList.add('hover-active'); // Add class on hover
+        });
+
+        hoverBox.addEventListener('mouseout', () => {
+            hoverBox.classList.remove('hover-active'); // Remove class when mouse leaves
+        });
+    </script>
+
+</body>
+
+</html>

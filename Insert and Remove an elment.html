@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container red bgc bigBox">
+        <div class="box">
+            it's a box
+        </div>
+        <div hidden class="box2">
+            it's a box
+        </div>
+    </div>
+    <script>
+        // document.querySelector(".container").innerHTML = `\n<div class="box1">\nit's box number 1\n</div>\n`;
+        document.querySelector(".container").outerHTML;
+        // document.querySelector(".container").innerText = "it's box number 2";
+        document.querySelector(".container").tagName;
+        document.querySelector(".container").nodeName;
+        // document.querySelector(".container").textContent = "it's box number 3";
+        document.querySelector(".box2").hidden = false;
+        document.querySelector(".box2").attributes;
+        document.querySelector(".box2").hasAttribute;
+        document.querySelector(".box2").getAttribute;
+        document.querySelector(".box2").setAttribute("style", "background-color: red");
+        document.querySelector(".box2").removeAttribute("style", "background-color: red");
+        document.desginMode = "on";
+        document.querySelector(".box2").dataset;
+        //insert
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "box3");
+        newDiv.className = "box3";
+        newDiv.innerHTML = "it's box number 3";
+        document.querySelector(".container").append(newDiv)
+        document.querySelector(".container").insertAdjacentHTML("afterbegin", "<b>Hi, its bold tag</b>")
+        // document.querySelector(".box3").remove();
+        document.querySelector(".container").classList[1];
+        document.querySelector(".container").className; 
+        document.querySelector(".container").classList.add("woafi");
+        // document.querySelector(".container").classList.remove("red");
+        document.querySelector(".container").classList.toggle("red");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+        <button id="btn">Click</button>
+    </div>
+    <script>
+        // let button = document.getElementById('btn');
+        // button.addEventListener("dblclick", ()=>{
+        //     alert("I was clicked")
+        // })
+        // let button = document.getElementById('btn');
+        // button.addEventListener("click", ()=>{
+        //     alert("I was clicked")
+        // })
+        // let button = document.getElementById('btn');
+        // button.addEventListener("mouseenter", ()=>{
+        //     alert("I was clicked")
+        // })
+        let button = document.getElementById('btn');
+        button.addEventListener("contextmenu", () => {
+            alert("I was clicked");
+        })
+        // let button = document.getElementById('btn');
+        // document.addEventListener("keydown", (e)=>{
+        //     console.log(e.key, e.keyCode)
+        // })
+
+        function getRandomColor() {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`
+        }
+
+        // let a = setInterval(() =>{
+        //     document.querySelector(".container").style.backgroundColor = getRandomColor();
+        // }, 3000);
+        // console.log(a)
+        // clearInterval
+        let y = setTimeout(() => {
+            document.querySelector(".container").style.backgroundColor = getRandomColor();
+        }, 5000);
+        console.log(y)
+        clearTimeout(y);
+
+        setTimeout(myFunction, 3000);
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "I love You !!";
+        }
+
+        // setTimeout(function () { myFunction("I love You !!!"); }, 3000);
+
+        // function myFunction(value) {
+        //     document.getElementById("demo").innerHTML = value;
+        // }
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+            let d = new Date();
+            document.getElementById("demo").innerHTML =
+                d.getHours() + ":" +
+                d.getMinutes() + ":" +
+                d.getSeconds();
+        }
+
+    </script>
+</body>
+
+</html>

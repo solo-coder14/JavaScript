@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documenet</title>
+</head>
+
+<body>
+    <div class="box">
+        I am Good.
+    </div>
+
+    <!-- W3schools -->
+    <h2>My First JavaScript</h2>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+    <p id="demo"></p>
+
+    <script>
+        alert("Hello");
+
+        console.log("Code is running...")
+        console.log("Code is running...")
+        console.log("Code is running...")
+
+        var a = prompt("Enter your name")
+        document.write("Welcome " + a)
+        var isTrue = confirm("Are you good? " + a)
+        if (isTrue) {
+            console.log("Blast")
+        } else {
+            console.log("No Blast")
+        }
+        console.log("Your name is: " + a)
+        document.title = "New Title"
+        document.body.style.backgroundColor = "red"
+
+        for (var i = 0; i < 3; i++) {
+            setTimeout(() => console.log(i), 1);
+        }
+
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => console.log(i), 1);
+        }
+    </script>
+
+</body>
+
+</html>

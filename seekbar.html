@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #seek-bar {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* General styles for the seek bar */
+#seek-bar {
+    -webkit-appearance: none; /* Remove default browser styles */
+    appearance: none;
+    width: 100%; /* Full width */
+    height: 8px; /* Height of the track */
+    background: #07dacf; /* Dark background for the track */
+    border-radius: 5px; /* Rounded track corners */
+    outline: none; /* Remove outline */
+    transition: background 0.3s; /* Smooth transition */
+    cursor: pointer;
+}
+
+/* Highlighted (filled) track portion */
+#seek-bar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #5a54ad, #831010); /* Green gradient */
+    height: 8px; /* Same height as the bar */
+    border-radius: 5px;
+}
+
+/* Thumb styles */
+#seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px; /* Size of the thumb */
+    height: 16px;
+    background: #9e1835; /* Green thumb */
+    border-radius: 50%; /* Circular thumb */
+    border: 2px solid #1600db; /* Optional black border for contrast */
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Thumb hover effect */
+#seek-bar::-webkit-slider-thumb:hover {
+    background: #17a517; /* Lighter green on hover */
+    transform: scale(1.2); /* Slightly enlarge */
+}
+
+button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div>
+        <audio id="audio" src="Martin Garrix feat. Bonn High On Life (Official Video)(256kbps).mp3"></audio>
+        <input id="seek-bar" type="range" value="0" min="0" max="100" step="0.1">
+        <div>
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+        <button id="play-pause">Play</button>
+    </div>
+    
+</body>
+<script>
+const audio = document.getElementById('audio');
+const seekBar = document.getElementById('seek-bar');
+const playPauseButton = document.getElementById('play-pause');
+const currentTimeDisplay = document.getElementById('current-time');
+const durationDisplay = document.getElementById('duration');
+
+// Format time in mm:ss
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${minutes}:${secs}`;
+}
+
+// Update seek bar and time display
+audio.addEventListener('timeupdate', () => {
+    // Sync the seek bar with the current playback time
+    seekBar.value = (audio.currentTime / audio.duration) * 100;
+    currentTimeDisplay.textContent = formatTime(audio.currentTime);
+});
+
+// Load duration when metadata is loaded
+audio.addEventListener('loadedmetadata', () => {
+    seekBar.max = 100;
+    durationDisplay.textContent = formatTime(audio.duration);
+});
+
+// Seek to a specific time in the audio
+seekBar.addEventListener('input', () => {
+    const seekTo = (seekBar.value / 100) * audio.duration;
+    audio.currentTime = seekTo;
+});
+
+// Play/Pause functionality
+playPauseButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+    } else {
+        audio.pause();
+        playPauseButton.textContent = 'Play';
+    }
+});
+
+</script>
+</html>

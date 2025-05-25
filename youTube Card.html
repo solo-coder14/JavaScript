@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .card {
+            display: flex;
+            background-color: #0f0f0f;
+            max-width: 60vw;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .img {
+            background-image: url(Screenshot\ \(7\).png);
+            flex: 0 0 225px;
+            /* Ensure the div maintains a consistent width */
+            height: auto;
+            /* Allow the height to adjust based on width */
+            aspect-ratio: 2 / 1;
+            /* Maintain a 2:1 aspect ratio (400px wide by 200px tall) */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            border-radius: 6px;
+        }
+
+        .capsule {
+            background-color: rgba(0, 0, 0, 0.212);
+            color: white;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 5px 5px;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-left: 10px;
+            /* border: 2px solid white; */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title {
+            margin-top: 6px;
+            color: white;
+        }
+
+        .description {
+            color: gray;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .card:hover{
+            background-color: #272727;
+        }
+        @media screen and (max-width: 670px) {
+            .img {
+                flex: 0 0 20vw;
+            }
+        }
+        @media screen and (max-width: 560px) {
+            .text{
+                gap: 9px;
+            }
+            .img{
+                flex: 0 0 25vw;
+            }
+            .title {
+            font-size: 15px;
+            
+        }
+
+        .description {
+            font-size: 13px;
+            display: inline;
+            /* border: 2px solid white; */
+
+        }
+        .break-line::after {
+            content: "";
+            display: block;
+            /* border: 2px solid white; */
+        }
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="demo"></div>
+    </div>
+    <script>
+        function createCard(title, cName, views, time, duration) {
+            let viewStr;
+            if (views < 1000000) {
+                viewStr = views / 1000 + "k";
+            } else if (views > 1000000) {
+                viewStr = views / 1000000 + "m";
+            } else {
+                viewStr = views / 1000 + "k";
+            }
+            let html = `<div class="card">
+            <div class="img">
+                <span class="capsule">${duration}</span>
+            </div>
+            <div class="text">
+                <span class="title"><b>${title}</b></span>
+                <span class="description"><span class="break-line">${cName} . ${viewStr} views </span>. ${time}</span>
+            </div>`
+            document.querySelector(".container").innerHTML += html;
+        }   
+        createCard("Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1", "SoloCoder", 580000, "2 month ago", "31:22")
+        createCard("Introduction to Backend | Sigma Web Dev video #2", "SoloCoder", 50000, "2 month ago", "31:22")
+
+    </script>
+</body>
+
+</html>

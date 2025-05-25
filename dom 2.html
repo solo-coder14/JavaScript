@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        .box {
+            width: 100px;
+            height: 50px;
+            border: 2px solid rgb(255, 228, 228);
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="box">Lorem ipsum dolor</span>
+        <span class="box" id = "demo">Lorem ipsum dolor</span>
+        <span class="box">Lorem ipsum dolor</span>
+        <span class="box">Lorem ipsum dolor</span>
+        <span class="box">Lorem ipsum dolor</span>
+    </div>
+    
+    <script>
+        document.body.children[0].children[0].style.color = "red";
+        let v = document.getElementsByClassName("box");
+        console.log(v);
+        v[2].style.color = "green";
+        document.getElementById('demo').style.backgroundColor = "aqua";
+        document.querySelector(".box").style.backgroundColor = "blue";
+        // document.querySelectorAll(".box")[4].style.width = "50vw";
+        document.querySelectorAll(".box").forEach(e =>{
+            e.style.width = "50vw";
+        })
+        document.getElementsByTagName('div');
+        document.querySelector(".container").contains(document.querySelector(".box"))
+    </script>
+</body>
+
+</html>
