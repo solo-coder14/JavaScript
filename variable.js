@@ -13,5 +13,5 @@ const obj = {
 };
 obj.name = "Bob";
 // obj = { name: "Charlie" }; // Error: Reassignment not allowed
-example()
+// example()
 console.log(obj)
