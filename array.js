@@ -1,5 +1,5 @@
 // let arr = []
-let arr = [1, 9, 2, 3, 5, 6]
+let arr = [1, 9, 2, 3, 5, 6];
 // arr[0] = 3213;
 // console.log(arr)
 // console.log(arr[0])
@@ -14,23 +14,19 @@ let arr = [1, 9, 2, 3, 5, 6]
 // arr.unshift("new")
 // arr.push("asadjk")
 // arr.reverse()
-// arr.sort((a, b)=> a - b)           //For ascending and for descending b - a 
+// arr.sort((a, b)=> a - b)           //For ascending and for descending b - a
 // console.log(arr)
 
 
 
-// Insert at a specific index 
-// arr.splice(1, 0, 1.5); // Insert 1.5 at index 1
-// console.log(arr); // [1, 1.5, 2]
+// Insert at a specific index
+// let furits = ['apple', 'orange', "mango"];
+// furits.splice(1, 0, "grape"); // Insert "grape" at index 1
+// console.log(furits); // ['apple', 'orange',"grape" "mango"]
 
-// Remove at a specific index 
-// arr.splice(2, 1); // Remove 2 element at index 2
-// console.log(arr); // [1, 2]
-
-
-// let a1 = [1,2,4]
-// let a2 = [6,7,4]
-// console.log(a1.concat(a2))
+// Remove at a specific index
+// arr.splice(2, 2); // Remove 2 and 3 element at index 2
+// console.log(arr);
 
 // for(let i = 0; i < arr.length; i++){
 //     console.log(arr[i])
@@ -65,15 +61,16 @@ let arr = [1, 9, 2, 3, 5, 6]
 //     }
 //   })
 
-//   console.log(newArr[2])
+//   console.log(newArr)
 
 
 //Array Method
 // const myArr = [[1,2],[3,4],[5,6]];
 // const newArr = myArr.flat();
+// console.log(newArr)
 
-// let value = arr.slice(1)
-// let value = arr.slice(1,3);
+// let value = arr.slice(1)           //[ 9, 2, 3, 5, 6 ]
+// let value = arr.slice(1,3);     //[ 9, 2 ]
 // console.log(value)
 
 
