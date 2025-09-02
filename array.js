@@ -3,7 +3,7 @@ let arr = [1, 9, 2, 3, 5, 6]
 // arr[0] = 3213;
 // console.log(arr)
 // console.log(arr[0])
-// console.log(arr.at(2))
+// console.log(arr.at(1))
 // console.log(arr.length)
 // console.log(arr.toString())
 // console.log(arr.join(" and "))
