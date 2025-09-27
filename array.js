@@ -22,7 +22,7 @@ let arr = [1, 9, 2, 3, 5, 6];
 // Insert at a specific index
 // let furits = ['apple', 'orange', "mango"];
 // furits.splice(1, 0, "grape"); // Insert "grape" at index 1
-// console.log(furits); // ['apple', 'orange',"grape" "mango"]
+// console.log(furits); // [ 'apple', 'grape', 'orange', 'mango' ]
 
 // Remove at a specific index
 // arr.splice(2, 2); // Remove 2 and 3 element at index 2
@@ -74,4 +74,4 @@ let arr = [1, 9, 2, 3, 5, 6];
 // console.log(value)
 
 
-// console.log(arr.copyWithin(2, 0, 2))
+// console.log(arr.copyWithin(2, 0, 2))    //[ 1, 9, 1, 9, 5, 6 ]
