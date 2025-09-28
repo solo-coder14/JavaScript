@@ -17,20 +17,20 @@
 // for (const c of "Woafi") {
 //     console.log(c);
 // }
-let s = "Mohammad Woafi";
-for (const element of s) {
-    console.log(element);
-}
+// let s = "Mohammad Woafi";
+// for (const element of s) {
+//     console.log(element);
+// }
 
-// let i = 0;
+let i = 0;
 // while (i < 6) {
 //     console.log(i)
 //     i++;
 // }
-// do {
-//     console.log(i)
-//     i++;
-// } while (i < 6);
+do {
+    console.log(i);
+    i++;
+} while (i < 6);
 
 // let arr = [1, 2, 3, 5, 6]
 // arr.forEach((value, idex, arr)=>{

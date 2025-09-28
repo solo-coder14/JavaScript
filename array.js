@@ -69,8 +69,9 @@ let arr = [1, 9, 2, 3, 5, 6];
 // const newArr = myArr.flat();
 // console.log(newArr)
 
+// let arr = [1, 9, 2, 3, 5, 6];
 // let value = arr.slice(1)           //[ 9, 2, 3, 5, 6 ]
-// let value = arr.slice(1,3);     //[ 9, 2 ]
+// let value = arr.slice(1, 3);       //[ 9, 2 ]
 // console.log(value)
 
 
