@@ -6,11 +6,15 @@ function funName(parameter) {
 }
 funName("Done")
 
+
+
 function sum(a, b, c = 3){
     return a + b + c;
 }
 
 console.log(sum(1, 2));
+
+
 
 const func1 = (x) => {
     console.log("An arrow function. The value of X is " + x);

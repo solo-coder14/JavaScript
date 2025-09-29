@@ -1,3 +1,5 @@
+// IIFE (Immediately Invoked Function Expression)
+
 (function display() {
     console.log("1Hello World!")
 })();
