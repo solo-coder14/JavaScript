@@ -3,8 +3,14 @@ let arr = [1, 3, 4, 5, 6, 7, 8, 9, 10]
 // for (let i = 0; i < arr.length; i++) {
 //     newArr.push(arr[i]**2);
 // }
-
 // console.log(newArr)
+
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubled = numbers.map(num => num * 2);
+// console.log(doubled); 
+
+
 
 // arr.map((e) => {
 //     console.log(e)
@@ -29,10 +35,10 @@ let arr = [1, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
-const red = (acc, value, key) => {
-    return acc + value
-}
-console.log(arr.reduce(red))
+// const red = (acc, value, key) => {
+//     return acc + value
+// }
+// console.log(arr.reduce(red))
 
 // let v = Array.from("harry")
 // console.log(v[1])
