@@ -30,8 +30,9 @@ let arr = [1, 3, 4, 5, 6, 7, 8, 9, 10]
 //     return false;
 // }
 // console.log(arr.filter(greaterThanSeven))
-// let newArr = arr.filter((value, i) => i != 1 )
-// console.log(newArr)
+
+let newArr = arr.filter((value, i) => i != 1 )
+console.log(newArr)
 
 
 
