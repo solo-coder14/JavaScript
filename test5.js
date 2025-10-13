@@ -1,19 +1,5 @@
-class Animal {
-  constructor(name) {
-    this._name = name; // protected-like
-  }
+let str = "flower";
 
-  _getName() { // protected-like
-    return this._name;
-  }
-}
+let str2 = "flow"
 
-class Dog extends Animal {
-  speak() {
-    console.log(`${this._getName()} barks 🐶`);
-  }
-}
-
-const dog = new Dog("Buddy");
-dog.speak();       // Buddy barks 🐶
-console.log(dog._name); // ❌ Still accessible (but convention says don't touch it)
+console.log(str2.indexOf("flow"));
