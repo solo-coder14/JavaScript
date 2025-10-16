@@ -1,5 +1,4 @@
-let str = "flower";
-
-let str2 = "flow"
-
-console.log(str2.indexOf("flow"));
+let arr = [1,2,3,5]
+for (let i=2; i < arr.length; i++){
+  console.log(arr[i]);
+}
