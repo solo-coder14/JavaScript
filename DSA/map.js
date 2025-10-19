@@ -3,6 +3,7 @@ let map = new Map();
 // Adding key-value pairs
 map.set("name", "Alice");
 map.set(1, "One");
+map.set(1, "Two");
 console.log(map)
 
 // Retrieving values
