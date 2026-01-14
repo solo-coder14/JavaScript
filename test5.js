@@ -1,6 +1,12 @@
-let a = 5
-let b = 0
+function firstfunc(){
+    let a = 0;
+    function secondFunc(a){
+        return a++;
+    }
 
-if ( a > 2 || b > 2){
-    console.log("Or operator")
+    let newA = secondFunc(a);
+    return newA;
 }
+
+console.log(firstfunc())
+console.log(firstfunc())
