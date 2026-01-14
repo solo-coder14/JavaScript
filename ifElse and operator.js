@@ -16,3 +16,8 @@ console.log(a ** b) // Exponential
 let c = a > b ? (a-b) : (b-a);
 console.log(c)
 
+
+if ( a > 2 || b > 2){
+    console.log("Or operator")
+}
+
