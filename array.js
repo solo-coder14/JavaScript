@@ -26,7 +26,20 @@ let arr = [1, 9, 2, 3, 5, 6];
 
 // Remove at a specific index
 // arr.splice(2, 2); // Remove 2 and 3 element at index 2
-// console.log(arr);
+// console.log(arr); // [ 1, 9, 5, 6 ]
+
+// Remove by value
+// If you need to remove an element by value but only the first instance of it, you can combine indexOf() and splice():
+
+// const items = ['a', 'b', 'c', 'b'];
+// const index = items.indexOf('b');
+
+// if (index > -1) {
+//   items.splice(index, 1);
+// }
+// Result: ['a', 'c', 'b']
+
+
 
 // for(let i = 0; i < arr.length; i++){
 //     console.log(arr[i])
