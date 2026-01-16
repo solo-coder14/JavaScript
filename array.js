@@ -14,6 +14,8 @@ let arr = [1, 9, 2, 3, 5, 6];
 // arr.unshift("new")
 // arr.push("asadjk")
 // arr.reverse()
+
+// sort
 // arr.sort((a, b)=> a - b)           //For ascending and for descending b - a
 // console.log(arr)
 
@@ -89,3 +91,17 @@ let arr = [1, 9, 2, 3, 5, 6];
 
 
 // console.log(arr.copyWithin(2, 0, 2))    //[ 1, 9, 1, 9, 5, 6 ]
+
+
+// total occurance of an element from an array
+// const fruits = ["apple", "banana", "apple", "orange", "apple"];
+// const count = fruits.filter(item => item === "apple").length;
+
+// console.log(count); // Output: 3
+
+// const items = ["A", "B", "A", "C"];
+// let count = 0;
+
+// for (const item of items) {
+//   if (item === "A") count++;
+// }
