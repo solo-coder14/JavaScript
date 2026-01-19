@@ -28,7 +28,7 @@
 // //   Spreading Objects (ES2018+)
 const obj1 = { a: 1, b: 2, arr:[{t: 5, y: 3}]};                     
 // const obj2 = { ...obj1, arr:[ {...obj1.arr[0], o:3}  ] };        //{ a: 1, b: 2, arr: [ { t: 5, y: 3, o: 3 } ] }
-const obj2 = { ...obj1, arr:[ ...obj1.arr, {r:5, k:7}  ] };         //{ a: 1, b: 2, arr: [ { t: 5, y: 3 }, { r: 5, k: 7 } ] }
+const obj2 = { ...obj1, arr:[ ...obj1.arr, {r:5, k:7}]};         //{ a: 1, b: 2, arr: [ { t: 5, y: 3 }, { r: 5, k: 7 } ] }
 
 // console.log(obj2); 
 
