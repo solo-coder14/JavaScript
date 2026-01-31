@@ -1,8 +1,27 @@
-function greet() {
-  console.log("Hello");
+// const user = {
+//   name: "Woafi",
+//   greet() {
+//     console.log(this.name);
+//   }
+// };
+
+// user.greet(); // Woafi
+
+
+
+const person = {
+  name: "Woafi",
+  greet: () => {
+    console.log(this.name);
+  }
+};
+
+person.greet(); // undefined
+
+
+function Car(model) {
+  this.model = model;
 }
-greet();
-console.log("Start");
 
-
-console.log("End");
+const c1 = new Car("Tesla");
+console.log(c1.model); // Tesla
