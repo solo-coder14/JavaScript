@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="search" />
+<script>
+  function debounce(fn, delay) {
+  let timer;
+
+  return function (...args) {
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+  const input = document.getElementById("search");
+
+  input.addEventListener(
+    "input",
+    debounce((e) => {
+      console.log("API call:", e.target.value);
+    }, 2000)
+  );
+</script>
+</body>
+</html>
