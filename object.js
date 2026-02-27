@@ -29,7 +29,8 @@
 // rabbit.__proto__ = animal;
 // console.log(rabbit.eats)
 
-
+// বর্ণানুক্রমে সাজানো
+        const sortedKeys = Object.keys(count).sort();
 
 
 
