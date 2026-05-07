@@ -37,8 +37,6 @@ console.log(carryfunction(2)(3)(2))
 // merge()
 
 
-
-
 // let a = 10;
 
 // function test() {
@@ -47,3 +45,12 @@ console.log(carryfunction(2)(3)(2))
 // }
 
 // test();
+
+
+// for (var i = 0; i < 4; i++) {
+//     setTimeout(() => console.log(i), 1);
+// }
+
+// for (let i = 0; i < 3; i++) {
+//     setTimeout(() => console.log(i), 1);
+// }

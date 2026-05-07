@@ -1,11 +1,3 @@
-// for (var i = 0; i < 4; i++) {
-//     setTimeout(() => console.log(i), 1);
-// }
-
-// for (let i = 0; i < 3; i++) {
-//     setTimeout(() => console.log(i), 1);
-// }
-
 // let timeout = Math.floor(Math.random() * 5000) + 1000;
 // let timeout = (1 + 6 * Math.random()) * 1000;
 // let cIn = Math.floor(Math.random() * 3);
