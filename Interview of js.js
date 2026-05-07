@@ -1,4 +1,4 @@
-function curryfunction(a){
+function carryfunction(a){
     return function(b){
         const multi = a * b
         return function(c){
@@ -7,7 +7,7 @@ function curryfunction(a){
     }
 }
 
-console.log(curryfunction(2)(3)(2))
+console.log(carryfunction(2)(3)(2))
 
 // const str1 = "hello"
 // const str2 = "world12323"
