@@ -1,25 +1,37 @@
 function createCounter() {
-    let count = 0;
-    
-    return {
-      increment: function() {
-        count++;
-        return count;
-      },
-      decrement: function() {
-        count--;
-        return count;
-      },
-      getCount: function() {
-        return count;
-      }
-    };
+  let count = 0;
+
+  return {
+    increment: function () {
+      count++;
+      return count;
+    },
+    decrement: function () {
+      count--;
+      return count;
+    },
+    getCount: function () {
+      return count;
+    }
+  };
+}
+
+const counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.decrement()); // 1
+
+
+function func() {
+  let a = 0;
+  return function fast() {
+    a++
+    return a
   }
-  
-  const counter = createCounter();
-  console.log(counter.increment()); // 1
-  console.log(counter.increment()); // 2
-  console.log(counter.decrement()); // 1
+}
+
+let v = func()
+console.log(v())
 
 
 
@@ -27,19 +39,18 @@ function createCounter() {
 
 
 
-  
-  // Bank example using closure
-  function createBankAccount(initialDeposit) {
+// Bank example using closure
+function createBankAccount(initialDeposit) {
   let balance = initialDeposit; // Private variable
 
   return {
-    deposit: function(amount) {
+    deposit: function (amount) {
       if (amount > 0) {
         balance += amount;
         console.log(`Deposited: $${amount}. New balance: $${balance}`);
       }
     },
-    withdraw: function(amount) {
+    withdraw: function (amount) {
       if (amount <= balance) {
         balance -= amount;
         console.log(`Withdrew: $${amount}. Remaining: $${balance}`);
@@ -47,7 +58,7 @@ function createCounter() {
         console.log("Insufficient funds!");
       }
     },
-    getBalance: function() {
+    getBalance: function () {
       return balance; // Controlled access
     }
   };
