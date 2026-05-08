@@ -21,3 +21,8 @@ const reducer = (acc, currIndex) => {
 
 let result = arr.reduce(reducer, 5);
 console.log(result);
+
+
+// accumulator → stores the running result
+// currentValue → current array item
+// 5 → starting value of accumulator

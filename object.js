@@ -18,6 +18,15 @@
 //     console.log(key, element);
 // }
 
+
+
+
+
+
+
+
+//_proto_
+
 // let animal = {
 //     eats: true
 // };
@@ -27,14 +36,27 @@
 // };
 
 // rabbit.__proto__ = animal;
-// console.log(rabbit.eats)
+// console.log(rabbit.eats) //true
+
+
 
 // বর্ণানুক্রমে সাজানো
-        const sortedKeys = Object.keys(count).sort();
+
+// const count = {
+//   banana: 2,
+//   apple: 5,
+//   mango: 1
+// };
+
+// const sortedKeys = Object.keys(count).sort();
+// console.log(sortedKeys);  //["apple", "banana", "mango"]
 
 
 
 
+
+
+//constructor
 // class Animal {
 //     constructor(name) {
 //         this.name = name;
@@ -52,44 +74,38 @@
 // const animal1 = new Animal("Bunny");
 // console.log(animal1.name)
 
-// l instanceof Animal;
 
 
 
 
 
+//Super
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//         console.log("Object is created")
+//     }
+//     eats() {
+//         console.log("Animal eats")
+//     }
+//     jumps() {
+//         console.log("Animal jumps")
+//     }
+// }
 
-
-
-
-
-
-class Animal {
-    constructor(name) {
-        this.name = name;
-        console.log("Object is created")
-    }
-    eats(){
-        console.log("Animal eats")
-    }
-    jumps(){
-        console.log("Animal jumps")
-    }
-}
-
-class lion extends Animal {
-    constructor(name) {
-        super(name)
-        console.log("Object is created and it is a lion")
-    }
-    eats(){
-        // super.eats()
-        console.log("Animal eats and roar") //method overrading
-    }
-}
-const lion1 = new lion("sher");
-console.log(lion1.name)
-lion1.eats();
+// class lion extends Animal {
+//     constructor(name) {
+//         super(name)
+//         console.log("Object is created and it is a lion")
+//     }
+//     eats(){
+//         super.eats()
+//         console.log("Animal eats and roar") //method overrading
+//     }
+// }
+// const lion1 = new lion("sher");
+// console.log(lion1.name)
+// lion1.eats();
 
 
 
