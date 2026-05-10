@@ -2,12 +2,14 @@
 
 // Key Characteristics:
 // Static members are called on the class directly, not on instances
-
 // They are shared across all instances
-
 // They cannot be called from an instance of the class
-
 // Useful for utility functions, factory methods, or shared data
+
+
+
+
+
 
 // Static method
 // class MathUtils {
@@ -33,23 +35,23 @@
 
 
 //static properties
-class Counter {
-  static count = 0;
+// class Counter {
+//   static count = 0;
   
-  static increment() {
-    Counter.count++;
-  }
+//   static increment() {
+//     Counter.count++;
+//   }
   
-  getCount() {
-    return Counter.count;
-  }
-}
+//   getCount() {
+//     return Counter.count;
+//   }
+// }
 
-console.log(Counter.count);  // 0
-Counter.increment();
-Counter.increment();
-console.log(Counter.count);  // 2
+// console.log(Counter.count);  // 0
+// Counter.increment();
+// Counter.increment();
+// console.log(Counter.count);  // 2
 
-const c1 = new Counter();
-const c2 = new Counter();
-console.log(c2.getCount());  // 2 (shared across instances)
+// const c1 = new Counter();
+// const c2 = new Counter();
+// console.log(c2.getCount());  // 2 (shared across instances)
