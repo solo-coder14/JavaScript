@@ -11,15 +11,25 @@
 
 
 
-
-
-
-// function display(value){
-//     console.log(value);
+//callback
+// function greet(name) {
+//     console.log("Hello " + name);
 // }
 
-// function multiplication (a, b, mycallBack){
-//     mycallBack(a*b);
+// function processUser(callback) {
+//     callback("Woafi");
 // }
 
-// multiplication (2, 5, display);
+// processUser(greet);
+
+
+//Higher order fuction
+// function calculate(a, b, operation) {
+//     return operation(a, b);
+// }
+
+// function add(x, y) {
+//     return x + y;
+// }
+
+// console.log(calculate(5, 3, add));
