@@ -1,17 +1,16 @@
-class num {
-    value = 0;
-    
-    increase() {
-        this.value = this.value + 1;
-        return this.value
-    }
-}
+const original = {
+  name: "Alice",
+  details: { age: 25, city: "New York" }
+};
 
-const obj1 = new num();
-const obj2 = new num();
-obj1.increase()
-obj1.increase()
-console.log(obj1.increase()) //3
+// const shallowCopy = { ...original };
+const shallowCopy = original;
 
-console.log(obj2.increase())  //1 Not Shared across instance
+shallowCopy.name = "woafi"
+shallowCopy.details.age = 30;
+
+console.log(original)
+console.log(shallowCopy)
+
+
 
