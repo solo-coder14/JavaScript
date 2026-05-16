@@ -1,16 +1,10 @@
-const original = {
-  name: "Alice",
-  details: { age: 25, city: "New York" }
-};
+let str = "34 5 123"
+strArray = str.split(" ")
+let intergerArray = []
 
-// const shallowCopy = { ...original };
-const shallowCopy = original;
+for (let s of strArray) {
+  intergerArray.push(Number(s))
+}
 
-shallowCopy.name = "woafi"
-shallowCopy.details.age = 30;
-
-console.log(original)
-console.log(shallowCopy)
-
-
-
+intergerArray.sort((a,b) => (a - b))
+console.log(intergerArray)
